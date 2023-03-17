@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+
+  <title>Releevant-Ecommerce</title>
+</head>
+
+<body>
+  <header class="header-carrito wrap">
+    <div class="logo">
+      <a href="/HTML/index.html">
+        <img src="../assets/images/logo.png" alt="logo" />
+        <!-- <h4 class="no-margin h6">My<span>Releevant</span>Store</h4> -->
+      </a>
+    </div>
+
+    <div class="navegacion-carrito">
+      <a href="carrito.html" class="btn">Carrito</a>
+      <img src="../assets/icons/arrow-right.svg" alt="flecha">
+      <a href="forma-de-pago.html" class="btn">Forma de pago</a>
+      <img src="../assets/icons/arrow-right.svg" alt="flecha">
+      <a href="finalizar-compra.html" class="btn  select">Finalizar pedido</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <div class="carrito-titulo">
+      <h1>Finalizar compra</h1>
+      <div>
+        <label class="tarjeta selected" for="tarjeta">
+          <input type="radio" name="tarjeta" id="tarjeta" value="7654" checked />
+          Mastercard ...7654
+        </label>
+        <button class="btn claro">Cambiar</button>
+      </div>
+    </div>
+
+    <div class="contenedor-finalizar">
+
+      <div class="shipping">
+        <h3 class="no-margin">Dirección de envío</h3>
+        <form>
+          <div>
+            <input type="text" name="name" placeholder="Nombre" />
+            <input type="text" name="surname" placeholder="Apellidos" />
+          </div>
+
+          <div>
+            <input type="text" name="phone" placeholder="Teléfono" />
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+
+          <div>
+            <input type="text" name="street" placeholder="Calle" />
+            <input type="number" name="number" placeholder="Número" />
+          </div>
+
+          <div>
+            <input type="text" name="county" placeholder="Provincia" />
+            <input type="number" name="post-code" placeholder="Código postal" />
+          </div>
+
+          <input type="text" name="country" placeholder="País" />
+          <input class="btn select" type="submit" value="Añadir direccíon de envío" />
+        </form>
+
+        <div class="icono">
+          <img src="../assets/icons/enviogratis.svg" alt="Icono" width="50px" />
+          <div>
+            <h4>Envio gratis en este pedido</h4>
+            <p>Por comprar mas de 100€</p>
+          </div>
+        </div>
+        <div class="icono">
+          <img src="../assets/icons/ticket-star.svg" alt="Icono" width="50px" />
+          <div>
+            <h4>4.5€ de descuento en tu siguiente compra</h4>
+            <p>Acumula el 1% de tus compras en descuentos</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="resume">
+        <h3 class="no-margin">Resumen de pedido</h3>
+        <div class="card-resumen-finalizar">
+          <div class="card-resumen">
+            <h4 class="no-margin">Samsung Galaxy A12 - LCD Display Replacement original </h4>
+              <div class="precio">
+                399,50 <span>€</span>
+              </div>
+          </div>
+  
+          <div class="card-cantidad">
+            <span class="item-menos">-</span>
+            <span class="item-number">1</span>
+            <span class="item-mas">+</span>
+          </div>
+        </div>
+        <div class="card-resumen-finalizar">
+          <div class="card-resumen">
+            <h4 class="no-margin">Samsung Galaxy A12 - LCD Display Replacement original </h4>
+              <div class="precio">
+                399,50 <span>€</span>
+              </div>
+          </div>
+  
+          <div class="card-cantidad">
+            <span class="item-menos">-</span>
+            <span class="item-number">1</span>
+            <span class="item-mas">+</span>
+          </div>
+        </div>
+        <div class="card-resumen-finalizar">
+          <div class="card-resumen">
+            <h4 class="no-margin">Samsung Galaxy A12 - LCD Display Replacement original </h4>
+              <div class="precio">
+                399,50 <span>€</span>
+              </div>
+          </div>
+  
+          <div class="card-cantidad">
+            <span class="item-menos">-</span>
+            <span class="item-number">1</span>
+            <span class="item-mas">+</span>
+          </div>
+        </div>
+
+        <div class="precio-total">
+          <h3 class="no-margin">Total</h3>
+          <div class="precio h3">
+           399,50 <span class="h3">€</span>
+          </div>
+
+        </div>
+          
+
+            <button class="btn">Pagar con tarjeta online</button>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <section class="contenedor-comprar wrap" >
+      <div class="icono">
+        <img src="../assets/icons/pagoseguro.svg" alt="Icono" width="50px" />
+        <div>
+          <h4>Pago seguro</h4>
+          <p>100% garantizado</p>
+        </div>
+      </div>
+      <div class="icono">
+        <img src="../assets/icons/enviogratis.svg" alt="Icono" width="50px" />
+        <div>
+          <h4>Envio gratis</h4>
+          <p>En pedidos de +100€</p>
+        </div>
+      </div>
+      <div class="icono">
+        <img src="../assets/icons/garantia.svg" alt="Icono" width="50px" />
+        <div>
+          <h4>2 años de garantía</h4>
+          <p>En todos los repuestos</p>
+        </div>
+      </div>
+      <div class="icono">
+        <img src="../assets/icons/ofertas.svg" alt="Icono" width="50px" />
+        <div>
+          <h4>Ofertas únicas</h4>
+          <p>Precio de mayorista</p>
+        </div>
+      </div>
+    </section>
+    
+    </main>
+    <footer >
+    <div class="footer wrap grid-2">
+    <div>
+      <div class="logo-footer">
+        <a href="/HTML/home.html">
+          <img src="../assets/images/logo-footer.PNG" alt="logo-footer" />
+          <!-- <h4 class="no-margin h6">My<span>Releevant</span>Store</h4> -->
+        </a>
+     </div>
+     <div class="grid-2">
+       <ul class="menu">
+         <li>Centro de ayuda</li>
+         <li>Servicio al consumidor</li>
+         <li>Escribenos</li>
+         <li>Servicio telefonico</li>
+       </ul>
+       <ul class="menu">
+         <li>Politica de privacidad</li>
+         <li>Condiciones de compra</li>
+         <li>Opiniones de clientes</li>
+         <li>Aviso de privacidad y cookies</li>
+       </ul>
+    
+     </div>
+    </div>
+    <div class="social">
+      <h4 class="no-margin">Únete a nuestra newsletter y 
+        recibe ofertas diarias</h4>
+    
+      <form class="social-newsletter">
+        <div class="newsletter">
+          <input class="newsletter-email" type="email" name="email" placeholder="Introduce tu email" />
+          <input class="newsletter-btn social"type="submit" value="Suscribirme" />
+        </div>
+        <label for="politica">
+          <input class="social-checkbox" type="checkbox" value="acepto" />
+         <p class="in-line"> Acepto la <span>política de privacidad</span> de esta web</p>
+        </label>
+      </form>
+    
+      <div class="social-iconos">
+        <h4>Siguenos en redes</h4>
+        <div>
+          <a href="">
+            <img src="../assets/icons/facebook.svg" alt="facebook">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="../assets/icons/youtube.svg" alt="youtube">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="../assets/icons/twitch.svg" alt="twitch">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="../assets/icons/instagram.svg" alt="instagram">
+    
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </footer>
+    </body>
+    </html>
