@@ -1,7 +1,7 @@
 let usersArray = JSON.parse(localStorage.getItem("usersArray")) || [];
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let usersLogueadosArray =
-  JSON.parse(localStorage.getItem("usersLogueadosArray")) || [];
+let session =
+  JSON.parse(localStorage.getItem("session")) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -199,7 +199,7 @@ function agregarCarrito() {
   const btnComprar = document.querySelectorAll('.comprar')
   btnComprar.forEach(elemento =>{
     elemento.addEventListener('click', ()=>{
-      if (usersLogueadosArray.length == 0) {
+      if (session.length == 0) {
         alert("Para comprar, Debes iniciar sesion");
         window.location.href = "http://127.0.0.1:5501/login.html";
       } else {
@@ -223,16 +223,16 @@ function agregarCarrito() {
 function bienvenido(){
   const loginButton = document.getElementById("loginButton");
   const bienvenido = document.getElementById("bienvenido");
-  console.table(usersLogueadosArray);
+  console.table(session);
   
-  if (usersLogueadosArray.length>=1) {
+  if (session.length>=1) {
     loginButton.innerText = "Logout";
-    bienvenido.innerText = `Bienvenido: ${usersLogueadosArray[0].nombre}`;
+    bienvenido.innerText = `Bienvenido: ${session[0].nombre}`;
   }
 }
 
 function logout() {
-  localStorage.removeItem("usersLogueadosArray");
+  localStorage.removeItem("session");
   localStorage.removeItem("carrito");
 }
 
