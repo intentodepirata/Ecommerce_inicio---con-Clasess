@@ -61,7 +61,7 @@ function agregarCarrito() {
     elemento.addEventListener('click', () => {
       if (usersLogueadosArray.length == 0) {
         alert("Para comprar, Debes iniciar sesion");
-        window.location.href = "http://127.0.0.1:5501/HTML/login.html";
+        window.location.href = "/login.html";
       } else {
     
         carrito.unshift('item')

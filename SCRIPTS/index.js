@@ -201,7 +201,7 @@ function agregarCarrito() {
     elemento.addEventListener('click', ()=>{
       if (session.length == 0) {
         alert("Para comprar, Debes iniciar sesion");
-        window.location.href = "http://127.0.0.1:5501/login.html";
+        window.location.href = "/login.html";
       } else {
     
         carrito.unshift('item')
@@ -225,9 +225,9 @@ function bienvenido(){
   const bienvenido = document.getElementById("bienvenido");
   console.table(session);
   
-  if (session.length>=1) {
+  if (session) {
     loginButton.innerText = "Logout";
-    bienvenido.innerText = `Bienvenido: ${session[0].nombre}`;
+    bienvenido.innerText = `Bienvenido: ${session.nombre}`;
   }
 }
 

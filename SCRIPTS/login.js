@@ -65,6 +65,10 @@ function registroOnclick() {
     !inputEmail.value ||
     !inputPassword.value
   ) {
+    inputNombre.value = ''
+    inputApellidos.value = ''
+    inputEmail.value = ''
+    inputPassword.value = ''
     mostrarAlertaErrorRegistro.classList.remove("none");
     setTimeout(() => {
       mostrarAlertaErrorRegistro.classList.add("none");
@@ -79,6 +83,10 @@ function registroOnclick() {
     inputPassword.value
   );
   user.registro(user);
+  inputNombre.value = ''
+  inputApellidos.value = ''
+  inputEmail.value = ''
+  inputPassword.value = ''
 
   mostrarAlertaExitoRegistro.classList.remove("none");
   setTimeout(() => {
@@ -101,18 +109,32 @@ function loginOnclick() {
     mostrarAlerta = mostrarAlertaExito;
 
     loginButton.innerText = "Logout";
-    bienvenido.innerText = `Bienvenido: ${this.nombre}`;
+    bienvenido.innerText = `Bienvenido: ${session.nombre}`;
+    console.log(session.nombre)
 
     session = usuarioLogueado;
     localStorage.setItem(
       "session",
       JSON.stringify(session)
+      
     );
-
+    usuarioInput.value=''
+    passwordInput.value=''
     console.table(JSON.parse(localStorage.getItem("session")));
+    let alertaExito = document.getElementById('alertaExito')
+    
 
-    window.location.href = "http://127.0.0.1:5501/index.html";
+    alertaExito.classList.remove("none");
+    setTimeout(() => {
+      alertaExito.classList.add("none");
+    }, 1000);
+    setTimeout(() => {
+      window.location.href = "/index.html";
+    }, 1000);
+ 
   } else {
+    usuarioInput.value=''
+    passwordInput.value=''
     let mostrarAlerta = mostrarAlertaError;
     mostrarAlerta.classList.remove("none");
     setTimeout(() => {
@@ -130,12 +152,12 @@ function logoutOnclick() {
 function bienvenido() {
   const loginButton = document.getElementById("loginButton");
   const bienvenido = document.getElementById("bienvenido");
-  console.table(session);
-  console.table(usersArray);
+
 
   if (session.length >= 1) {
     loginButton.innerText = "Logout";
     bienvenido.innerText = `Bienvenido: ${session.nombre}`;
+   
   }
 }
 

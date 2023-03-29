@@ -1,7 +1,7 @@
 let usersArray = JSON.parse(localStorage.getItem("usersArray")) || [];
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let usersLogueadosArray =
-  JSON.parse(localStorage.getItem("usersLogueadosArray")) || [];
+let session =
+  JSON.parse(localStorage.getItem("session")) || [];
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,16 +23,16 @@ function mostrarCarrito(){
   function bienvenido(){
     const loginButton = document.getElementById("loginButton");
     const bienvenido = document.getElementById("bienvenido");
-    console.log(usersLogueadosArray);
+    console.log(session);
     
-    if (usersLogueadosArray.length>=1) {
+    if (session) {
       loginButton.innerText = "Logout";
-      bienvenido.innerText = `Bienvenido: ${usersLogueadosArray[0].nombre}`;
+      bienvenido.innerText = `Bienvenido: ${session.nombre}`;
     }
   }
 
 
 function logout() {
-  localStorage.removeItem("usersLogueadosArray");
+  localStorage.removeItem("session");
   localStorage.removeItem("carrito");
 }
