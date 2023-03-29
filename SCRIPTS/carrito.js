@@ -1,8 +1,7 @@
 let usersArray = JSON.parse(localStorage.getItem("usersArray")) || [];
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let usersLogueadosArray =
-  JSON.parse(localStorage.getItem("usersLogueadosArray")) || [];
-
+let session =
+  JSON.parse(localStorage.getItem("session")) || [];
 
   document.addEventListener("DOMContentLoaded", () => {
    
@@ -59,7 +58,7 @@ function agregarCarrito() {
   const btnComprar = document.querySelectorAll('.comprar');
   btnComprar.forEach(elemento => {
     elemento.addEventListener('click', () => {
-      if (usersLogueadosArray.length == 0) {
+      if (!session) {
         alert("Para comprar, Debes iniciar sesion");
         window.location.href = "/login.html";
       } else {
