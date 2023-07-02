@@ -7,7 +7,7 @@ let session =
 document.addEventListener("DOMContentLoaded", () => {
     mostrarCarrito()
     actualizarCarrito()
-    bienvenido()
+  
 })
 
 function mostrarCarrito(){
