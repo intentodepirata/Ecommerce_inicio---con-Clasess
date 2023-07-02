@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sliderCards2()
   mostrarCarrito()
   actualizarCarrito()
-  bienvenido()
+
   agregarCarrito()
 });
 
